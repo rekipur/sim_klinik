@@ -2,16 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+	<main>
+	 <center> 
+	 	<img src="images/andaglos_logo.png" class="img-responsive" width="500" height="160">
+	 	<img src="images/home.png" class="img-responsive" width="800" height="800"> 
+	 </center>
+  </main>
 </div>
 @endsection
