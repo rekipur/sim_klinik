@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link rel="icon" href="images/Andaglos-UKM.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
@@ -24,9 +24,7 @@
         ]); ?>
     </script>
 </head>
-<body  class="hidden-sn blue-skin" style="padding-top: 7%;">
-
-
+<body  class="hidden-sn blue-skin">
 
  @if (Auth::check())     
   <!--Double Navigation-->
@@ -59,11 +57,30 @@
                 <ul class="collapsible collapsible-accordion">
                 
                 <li><a class="collapsible-header waves-effect arrow-r" href="{{ url('/home') }}"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-group"></i>Personalia<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-archive"></i>Master Data<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="#" class="waves-effect">Guru</a></li>
-                                <li><a href="#" class="waves-effect">Siswa</a></li>
+                                <li><a href="#" class="waves-effect">User</a></li>
+                                <li><a href="#" class="waves-effect">Poli</a></li>
+                                <li><a href="#" class="waves-effect">Kamar</a></li>
+                                <li><a href="#" class="waves-effect">Penjamin</a></li>
+                                <li><a href="#" class="waves-effect">Perujuk</a></li>
+                                <li><a href="#" class="waves-effect">Jabatan</a></li>
+                                <li><a href="#" class="waves-effect">Otoritas</a></li>
+                                <li><a href="#" class="waves-effect">Suplier</a></li>
+                                <li><a href="#" class="waves-effect">Pasien</a></li>
+                                <li><a href="#" class="waves-effect">Produk</a></li>
+                                <li><a href="#" class="waves-effect">Jenis Obat</a></li>
+                                <li><a href="#" class="waves-effect">Kelas Kamar</a></li>
+                                <li><a href="#" class="waves-effect">Cito</a></li>
+                                <li><a href="#" class="waves-effect">Operasi</a></li>
+                                <li><a href="#" class="waves-effect">Satuan</a></li>
+                                <li><a href="#" class="waves-effect">Kategori</a></li>
+                                <li><a href="#" class="waves-effect">Komisi Produk</a></li>
+                                <li><a href="#" class="waves-effect">Komisi Faktur</a></li>
+                                <li><a href="#" class="waves-effect">Gudang</a></li>
+                                <li><a href="#" class="waves-effect">Daftar Akun</a></li>
+                                <li><a href="#" class="waves-effect">Group Akun</a></li>
                             </ul>
                         </div>
                     </li>
@@ -86,7 +103,7 @@
                 
             <!-- Breadcrumb-->
             <div class="breadcrumb-dn">
-                <p>Master Data</p>
+                <p>KLINIK KOSASIH KEMILING</p>
             </div>
             @endif
 
@@ -99,9 +116,17 @@
                     <a class="nav-link" href="{{ url('/register') }}"><i class="fa fa-user-plus"></i> <span class="hidden-sm-down">Register</span></a>
                 </li>
                         @else
-                
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><span class="hidden-sm-down"><i class="fa fa-key"></i> Ubah Password</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://andaglos.com/"><span class="hidden-sm-down"><i class="fa fa-envelope"></i> Contact Us</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><span class="hidden-sm-down"><i class="fa fa-user"></i> {{ Auth::user()->name }}</span></a>
+                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>{{ Auth::user()->name }} </a>
+                    <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-sign-out"></i> Logout </a>
                     <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                         <a class="dropdown-item" href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
