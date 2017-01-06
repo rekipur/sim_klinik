@@ -34,20 +34,24 @@
         <ul id="slide-out" class="side-nav fixed custom-scrollbar">
             <!-- Logo -->
             <li>
-                <div class="logo-wrapper sn-ad-avatar-wrapper">
-                <center><div class="rgba-stylish-strong">
-                    <img src="images/logo.png" class="img-fluid rounded-circle" style="margin-left: 35%;"><br><br>
-                        <p class="user white-text"><br>Aplikasi {{ config('app.name')}}</p>
-                    </div></center>
+                <div class="logo-wrapper waves-light">
+                    <a href="http://www.andaglos.com"><img src="images/andaglos_logo.png" class="img-fluid flex-center"></a>
                 </div>
+
             </li>
             <!--/. Logo -->
+
+            <!--/. <li>
+                <div class="logo-wrapper sn-ad-avatar-wrapper">
+                
+                </div>
+            </li>-->
 
             <!--Social-->
             <li>
                 <ul class="social">
-                    <!--<li><a class="icons-sm">&nbsp;<i class="fa fa-user"> </i></a></li>-->
-                    <hr>
+                   <li><a class="icons-sm fb-ic" href="https://www.facebook.com/andaglos/?fref=ts"><i class="fa fa-facebook"> </i></a></li>
+                    <li><a class="icons-sm gplus-ic" href="#"><i class="fa fa-google-plus"> </i></a></li>
                 </ul>
             </li>
             <!--/Social-->
