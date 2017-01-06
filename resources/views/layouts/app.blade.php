@@ -151,7 +151,6 @@
     <!--/Double Navigation-->
 
         @yield('content')
-    </div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="{{asset('js/jquery-2.2.3.min.js')}}"></script>
