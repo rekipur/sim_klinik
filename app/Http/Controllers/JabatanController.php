@@ -33,7 +33,7 @@ class JabatanController extends Controller
 
         $html = $htmlBuilder
          ->addColumn(['data' => 'nama_jabatan', 'name' => 'nama_jabatan', 'title' => 'Jabatan'])
-         ->addColumn(['data' => 'action', 'name'=>'action','title'=>'', 'orderable'=>false, 'searchable'=>false]);
+         ->addColumn(['data' => 'action', 'name'=>'action','title'=>'Pilihan', 'orderable'=>false, 'searchable'=>false]);
 
          return view('jabatans.index')->with(compact('html'));   
     }
@@ -103,12 +103,15 @@ class JabatanController extends Controller
     {
         //
 
-          $jabatan = Jabatan::find($id);
-        if(!$jabatan->update($request->all())) return redirect()->back();
-        Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>"Berhasil Mengubah Jabatan $jabatan->nama_jabatan"
-            ]);
+        $this->validate($request,[
+            'nama_jabatan'=>'required|max:225|unique:jabatans,nama_jabatan,' . $id]);
+        $jabatan = Jabatan::find($id);
+        $jabatan->update($request->only('nama_jabatan'));
+
+                Session::flash("flash_notification", [
+                    "level"=>"success",
+                    "message"=>"Poli telah diperbaharui"
+                ]);
         return redirect()->route('jabatans.index');
     }
 
@@ -121,12 +124,14 @@ class JabatanController extends Controller
     public function destroy($id)
     {
         //
-        Jabatan::destroy($id);
+        $jabatan = Jabatan::find($id);
+        $jabatan->delete();
+        
+            Session::flash("flash_notification", [
+                    "level"=>"danger",
+                    "message"=>"Jabatan berhasil di hapus"
+                ]);
+            return redirect()->route('jabatans.index');
 
-        Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>"Jabatan Berhasil Di Hapus"
-            ]);
-        return redirect()->route('jabatans.index');
     }
 }
