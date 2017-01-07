@@ -69,7 +69,7 @@
                                 <li><a href="#" class="waves-effect">Kamar</a></li>
                                 <li><a href="#" class="waves-effect">Penjamin</a></li>
                                 <li><a href="#" class="waves-effect">Perujuk</a></li>
-                                <li><a href="#" class="waves-effect">Jabatan</a></li>
+                                <li><a href="{{ route('jabatans.index') }}" class="waves-effect">Jabatan</a></li>
                                 <li><a href="#" class="waves-effect">Otoritas</a></li>
                                 <li><a href="#" class="waves-effect">Suplier</a></li>
                                 <li><a href="#" class="waves-effect">Pasien</a></li>
@@ -150,6 +150,7 @@
     </header>
     <!--/Double Navigation-->
 
+        @include('layouts._flash')
         @yield('content')
 
     <!-- Scripts -->
@@ -175,5 +176,6 @@
         Ps.initialize(el);
     </script>
 
+    @yield('scripts')
 </body>
 </html>
