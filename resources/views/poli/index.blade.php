@@ -8,7 +8,7 @@
 				<!--Panel-->
 				<div class="card">
 				    <div class="card-header primary-color-dark white-text">
-				        Daftar Jabatan
+				        Daftar Poli
 				    </div>
 				    <style type="text/css">
 				    	thead{
@@ -19,7 +19,7 @@
 				    </style>
 				    <div class="card-block">
 						<div class="table-responsive">
-							<p> <a href="{{ route('jabatans.create') }}" class="btn btn-info btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Jabatan</a></p>
+							<p> <a href="{{ route('poli.create') }}" class="btn btn-info btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Poli</a></p>
 							{!! $html->table(['class'=>'table table-bordered table-striped display nowrap','cellspacing'=>'0','width'=>'100%']) !!}
 						</div>
 				    </div>

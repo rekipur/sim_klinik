@@ -54,7 +54,7 @@
 
         <div class="md-form{{ $errors->has('email') ? ' has-error' : '' }}">
             <i class="fa fa-envelope prefix"></i>
-            {!! Form::email('email', null, ['class' =>'form-control']) !!}
+            {!! Form::text('email', null, ['class' =>'form-control']) !!}
             {!! Form::label('email', 'Alamat Email') !!}
             {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
         </div>

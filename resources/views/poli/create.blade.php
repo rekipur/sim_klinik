@@ -7,12 +7,12 @@
 				
 				<div class="card">
 				    <div class="card-header primary-color-dark white-text">
-				        Tambah Jabatan
+				        Tambah Poli
 				    </div>
 
 						<div class="card-block">
-							{!! Form::open(['url' => route('jabatans.store'), 'method' => 'post', 'class' => 'form-horizontal']) !!}
-							@include('jabatans._form')
+							{!! Form::open(['url' => route('poli.store'), 'method' => 'post', 'class' => 'form-horizontal']) !!}
+							@include('poli._form')
 							{!! Form::close() !!}
 						</div>
 				</div>

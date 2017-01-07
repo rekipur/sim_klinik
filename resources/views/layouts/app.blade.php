@@ -10,7 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="icon" href="images/Andaglos-UKM.jpg" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/mdb.min.css') }}">
@@ -24,7 +24,7 @@
         ]); ?>
     </script>
 </head>
-<body  class="hidden-sn blue-skin">
+<body  class="hidden-sn blue-skin" style="padding-top: 7%;">
 
  @if (Auth::check())     
   <!--Double Navigation-->
@@ -65,7 +65,7 @@
                         <div class="collapsible-body">
                             <ul>
                                 <li><a href="#" class="waves-effect">User</a></li>
-                                <li><a href="#" class="waves-effect">Poli</a></li>
+                                <li><a href="{{ route('poli.index') }}" class="waves-effect">Poli</a></li>
                                 <li><a href="#" class="waves-effect">Kamar</a></li>
                                 <li><a href="#" class="waves-effect">Penjamin</a></li>
                                 <li><a href="#" class="waves-effect">Perujuk</a></li>
@@ -175,7 +175,6 @@
         var el = document.querySelector('.custom-scrollbar');
         Ps.initialize(el);
     </script>
-
     @yield('scripts')
 </body>
 </html>

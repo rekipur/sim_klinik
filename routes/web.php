@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('jabatans','JabatanController');
+Route::group(['middleware'=>'web'], function () {
+
+	Route::group(['prefix'=>'Master-Data', 'middleware'=>['auth', 'role:admin']] , function () {
+		Route::resource('poli', 'PoliController');
+		Route::resource('jabatans','JabatanController');
 	});
+});
