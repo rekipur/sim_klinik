@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>'web'], function () {
 
-	Route::group(['prefix'=>'Master-Data', 'middleware'=>['auth', 'role:admin']] , function () {
+	Route::group(['middleware'=>['auth', 'role:admin']] , function () {
 		Route::resource('poli', 'PoliController');
 		Route::resource('jabatans','JabatanController');
 	});

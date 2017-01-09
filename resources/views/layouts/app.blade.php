@@ -23,6 +23,12 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <style type="text/css">
+        table {
+        width: 800px;
+        margin: 0 auto;
+    }
+    </style>
 </head>
 <body  class="hidden-sn blue-skin" style="padding-top: 7%;">
 
