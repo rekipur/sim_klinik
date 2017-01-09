@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-md-8">
 		<div class="md-form{{ $errors->has('nama_jabatan') ? ' has-error' : '' }}" >
-			<i class="fa fa-envelope prefix"></i>
+			<i class="fa fa-angle-double-up prefix"></i>
 		{!! Form::text('nama_jabatan', null, ['class'=>'form-control']) !!}
 		{!! Form::label('nama_jabatan', 'Jabatan') !!}
 		{!! $errors->first('nama_jabatan', '<p class="help-block">:message</p>') !!}
